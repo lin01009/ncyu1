@@ -1,0 +1,551 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ced4e0;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 認證區 */
+#auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); 
+    transition: background-color 0.3s;
+}
+
+.auth {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* 深色模式樣式 */
+body.dark-mode #auth-container .auth {
+    background-color: #333; 
+    color: white; 
+}
+
+.auth input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 60%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+body.dark-mode #auth-container .auth input {
+    background-color: #555; 
+    color: white; 
+    border-color: #777;
+}
+
+.auth span {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s; 
+}
+
+
+body.dark-mode #auth-container .auth span {
+    color: #ddd; 
+}
+
+.auth button {
+    padding: 10px 15px;
+    background-color: #02080f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.auth button:hover {
+    background-color: #333;
+}
+
+/* 深色模式下的按鈕樣式 */
+body.dark-mode #auth-container .auth button {
+    background-color: #000000; 
+    color: white; 
+}
+body.dark-mode #auth-container .auth button:hover {
+    background-color: #a9aaab;
+}
+
+
+/* 主內容 */
+header {
+    background-color: #02080f; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 關於我 */
+#about {
+    background-color: #fff;
+    padding: 20px 50px; 
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 30px; 
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#about .left-section {
+    flex: 1; 
+    text-align: left;
+    max-width: 45%; 
+}
+
+#about .left-section ul {
+    margin-top: 0;
+    margin-bottom: 10px; 
+}
+
+#about .left-section iframe {
+    margin-top: 10px; 
+}
+
+#about .right-section {
+    text-align: right;
+    flex-shrink: 0; 
+    margin-left: 10px; 
+    max-width: 45%; 
+}
+
+#about img {
+    width: 150px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+    border: 5px solid #ffffff; 
+    box-shadow: 0 0 0 5px #4a6e91; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* 校園圖片展示 */
+#slideshow {
+    position: fixed;
+    top: 90px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    width: 120px; 
+    height: auto; 
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#slideshow-img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* 旅遊回憶 */
+#travel-memories {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#travel-memories .gallery-container img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+#travel-memories .gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+
+/* 留言板 */
+#message-board {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px; 
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+
+#message-board input {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#message-board button {
+    padding: 10px 15px;
+    background-color: #02080f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#message-board button:hover {
+    background-color: #333;
+}
+
+/* 社交媒體圖標 */
+#social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#social-icons img {
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+#social-icons img:hover {
+    filter: none;
+    transform: scale(1.2);
+}
+
+/* 固定頁腳 */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #02080f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100;
+    height: 80px; 
+}
+
+
+main {
+    margin: 20px;
+    padding-bottom: 80px; 
+}
+
+/* 時鐘與天氣資訊區域 */
+#clock-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#clock {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#weather {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 主題切換按鈕樣式 */
+#theme-toggle {
+    position: fixed;
+    top: 10px; 
+    right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 按鈕懸停效果 */
+#theme-toggle:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: none; 
+    color: inherit;
+}
+
+
+body.dark-mode #theme-toggle {
+    background-color: #555;
+    color: white;
+}
+
+body.light-mode #theme-toggle {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* 暗黑模式樣式 */
+body.dark-mode {
+    background-color: #121212; 
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #auth-container {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+body.dark-mode .auth {
+    background-color: #333; 
+    border-color: #555; 
+    color: white; 
+}
+
+body.dark-mode header {
+    background-color: #333; 
+}
+
+body.dark-mode #about {
+    background-color: #333; 
+    color: white; 
+    border-color: #555; 
+}
+
+body.dark-mode #travel-memories {
+    background-color: #333; 
+    color: white; 
+    border-color: #555; 
+}
+
+body.dark-mode #message-board {
+    background-color: #333;
+    color: white; 
+    border-color: #555; 
+}
+
+body.dark-mode #message-board button:hover {
+    background-color: #a9aaab; 
+    color: white; 
+    transition: background-color 0.3s; 
+}
+
+body.dark-mode #clock-weather {
+    background-color: #333; 
+    border-color: #555; 
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #333; 
+}
+
+/* 頁頂樣式 */
+header {
+    background-color: #02080f; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 頁底樣式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #02080f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100;
+    height: 80px; 
+}
+
+/* 暗黑模式樣式 */
+body.dark-mode {
+    background-color: #121212; 
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode main {
+    background-color: #0c0d0d; 
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* 保持頁頂和頁底的原色 */
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #02080f;
+    color: white;
+}
+
+/* 打字機動畫 */
+#animated-title {
+    display: inline-block;
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid #02080f; 
+    font-size: 36px;
+    font-weight: bold;
+    animation: typing 4s steps(30, end), blink 0.7s step-end infinite;
+}
+
+/* 打字機效果 */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; 
+    }
+}
+
+/* 光標閃爍效果 */
+@keyframes blink {
+    from {
+        border-color: #02080f;
+    }
+    to {
+        border-color: transparent;
+    }
+}
+/* 拼圖遊戲 */
+#puzzle-game {
+    background-color: #fff;
+    padding: 40px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#puzzle-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: grab;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#puzzle-board {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.drop-zone {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-zone.success {
+    border: 2px solid green;
+}
+
+#completion-message {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: #f0fff0;
+    display: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* 黑暗模式 - 拼圖遊戲 */
+body.dark-mode #puzzle-game {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark-mode .puzzle-piece {
+    border-color: #555;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .drop-zone {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .drop-zone.success {
+    border-color: #4caf50; 
+    background-color: transparent; 
+}
+
+body.dark-mode #completion-message {
+    color: #ffffff; 
+    border-color: #1b5e20; 
+}
